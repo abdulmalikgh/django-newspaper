@@ -27,6 +27,9 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
+                        <li class="nav-item pt-4">
+                            <a href="{% url 'article_new' %}">+ New</a>
+                        </li>
                           <li class="nav-item">
                             <a class="nav-link btn btn-outline-secondary m-2 px-3" href="{% url 'password_change' %}">Change Password</a>
                         </li>
@@ -44,6 +47,7 @@
                             </ul>
                         </li> {% endcomment %}
                     {% else %}
+                        
                         <li class="nav-item">
                             <a class="nav-link btn btn-outline-secondary m-2 px-3" href="{% url 'login' %}">Log In</a>
                         </li>
