@@ -122,9 +122,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+# import os 
 
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+# SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+# SENDGRID_SANDBOX_MODE_IN_DEBUG=True
+# SENDGRID_ECHO_TO_STDOUT=True
